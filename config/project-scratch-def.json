@@ -1,0 +1,12 @@
+{
+  "orgName": "noahdaniel Company",
+  "edition": "Developer",
+  "username": "noahtest@sfdx.com",
+  "adminEmail": "nsddaniel@gmail.com",
+  "features": [],
+  "settings": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+    }
+  }
+}
