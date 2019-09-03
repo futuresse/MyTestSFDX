@@ -1,9 +1,7 @@
 {
   "orgName": "noahdaniel Company",
   "edition": "Developer",
-  "username": "noahtest@sfdx.com",
-  "adminEmail": "nsddaniel@gmail.com",
-  "features": [],
+  "features": ["Communities"],
   "settings": {
     "orgPreferenceSettings": {
       "s1DesktopEnabled": true

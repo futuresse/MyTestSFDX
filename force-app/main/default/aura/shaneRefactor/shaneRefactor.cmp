@@ -1,0 +1,64 @@
+<aura:component controller="TestController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="isTechVisible" type="Boolean" default="false"/>
+    <lightning:button onclick="{! c.handleToggleTech }" label="Toggle Tech"/>
+    <aura:attribute name="categories" type="AssessmentLineItem__c[]"/>
+    <aura:attribute name="newCategory" type="AssessmentLineItem__c" 
+                    default="{'sObjectType' : 'AssessmentLineItem__c',
+                             'Name' : '',
+                             'Score__c' : null,
+                             'maxScore__c' : 10,
+                             'Interviewed__c' : false,
+                             'Comment__c' : ''}"/>
+    
+    <div style="max-width: 910px;"> <!-- Please leave this div as it is needed to mimic actual component size. -->
+        <!-- Header -->
+        <lightning:card title="General Panel Information">
+            <!-- Form for collecting Actual Score, Repanel, and Comments -->
+            <form class="slds-form--stacked">
+                <lightning:input type="number" aura:id="aliform" label="Actual Score"
+                                 name="actualscore"
+                                 value="{!v.newCategory.Score__c}"
+                                 required="true"/>
+                <lightning:input type="checkbox" aura:id="aliform" label="Repanel?"
+                                 name="repanelcat"
+                                 value="{!v.newCategory.Interviewed__c}"
+                                 />
+                <lightning:input aura:id="aliform" label="Comments"
+                                 name="catcomment"
+                                 value="{!v.newCategory.Comment__c}"
+                                 />
+            </form>
+            <!--1
+            <lightning:accordion aura:id="Technology" activeSectionName="Technology"> 1-->
+                <!-- aura:if to dynamically display categories.-->
+                <!-- <aura:if isTrue="{!v.isTECHVisible}"> -->
+            <!--2
+                <lightning:accordionSection name="Project Explanation" label="Project Explanation">
+                    <p></p>
+                    <p>Max Score</p>
+                    <p>Respond</p>
+                    <p>Comments</p>
+                </lightning:accordionSection>
+2-->
+                <!-- </aura:if> -->
+            <!--3
+                <aura:if isTrue="{!v.isTechVisible}">
+                    <lightning:accordionSection name="Fundementals" label="Fundementals">
+                        <p></p>
+                        <p>Max Score</p>
+                        <p>Respond</p>
+                        <p>Comments</p>
+                    </lightning:accordionSection>
+                </aura:if>
+                
+                
+                
+            </lightning:accordion> 3-->
+            <!-- Don't forget about your friend: Mr. SLDS -->
+       	
+        </lightning:card>
+    </div>
+    <c:shaneRefactorpanelcategory panelCategories="{!v.categories}"/>
+</aura:component>

@@ -1,0 +1,20 @@
+<!-- instance of a single Assessment Line Item, treated as a panel category -->
+<aura:component >
+    <aura:attribute name="category" type="AssessmentLineItem__c"/>
+    
+    <aura:attribute name="score" type="Integer" default="5"/>
+    <aura:attribute name="maxScore" type="Integer" default="10"/>
+    <aura:attribute name="repanel" type="Boolean" default="false"/>
+    <aura:attribute name="comments" type="String" default="Bad"/>
+    
+    <!--lightning:accordion aura:id="accordion" activeSectionName="B">
+        <lightning:accordionSection name="B" label="Accordion Title B"-->
+            <p>Score = {!v.score}
+            Max Score = {!v.maxScore}
+            Repanel = {!v.repanel}
+            Comments = {!v.comments}</p>
+        <!--/lightning:accordionSection>
+
+    </lightning:accordion-->
+    
+</aura:component>
