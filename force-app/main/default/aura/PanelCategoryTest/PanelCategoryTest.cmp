@@ -9,11 +9,22 @@
     
     <!--lightning:accordion aura:id="accordion" activeSectionName="B">
         <lightning:accordionSection name="B" label="Accordion Title B"-->
-            <p>Score = {!v.score}
-            Max Score = {!v.maxScore}
-            Repanel = {!v.repanel}
-            Comments = {!v.comments}</p>
-        <!--/lightning:accordionSection>
+    <!-- Form for collecting Actual Score, Repanel, and Comments -->
+    <form class="slds-form--stacked">
+        <lightning:input type="number" aura:id="aliform" label="Actual Score"
+                         name="actualscore"
+                         value="{!v.newCategory.Score__c}"
+                         required="true"/>
+        <lightning:input type="checkbox" aura:id="aliform" label="Repanel?"
+                         name="repanelcat"
+                         value="{!v.newCategory.Interviewed__c}"
+                         />
+        <lightning:input aura:id="aliform" label="Comments"
+                         name="catcomment"
+                         value="{!v.newCategory.Comment__c}"
+                         />
+    </form>
+    <!--/lightning:accordionSection>
 
     </lightning:accordion-->
     

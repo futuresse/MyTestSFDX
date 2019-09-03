@@ -2,7 +2,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <aura:attribute name="isTechVisible" type="Boolean" default="false"/>
-    <lightning:button onclick="{! c.handleToggleTech }" label="Toggle Tech"/>
+    <!--lightning:button onclick="{! c.handleToggleTech }" label="Toggle Tech"/-->
     <aura:attribute name="categories" type="AssessmentLineItem__c[]"/>
     <aura:attribute name="newCategory" type="AssessmentLineItem__c" 
                     default="{'sObjectType' : 'AssessmentLineItem__c',
@@ -15,21 +15,7 @@
     <div style="max-width: 910px;"> <!-- Please leave this div as it is needed to mimic actual component size. -->
         <!-- Header -->
         <lightning:card title="General Panel Information">
-            <!-- Form for collecting Actual Score, Repanel, and Comments -->
-            <form class="slds-form--stacked">
-                <lightning:input type="number" aura:id="aliform" label="Actual Score"
-                                 name="actualscore"
-                                 value="{!v.newCategory.Score__c}"
-                                 required="true"/>
-                <lightning:input type="checkbox" aura:id="aliform" label="Repanel?"
-                                 name="repanelcat"
-                                 value="{!v.newCategory.Interviewed__c}"
-                                 />
-                <lightning:input aura:id="aliform" label="Comments"
-                                 name="catcomment"
-                                 value="{!v.newCategory.Comment__c}"
-                                 />
-            </form>
+            <p>Tony's App Here</p>
             <!--1
             <lightning:accordion aura:id="Technology" activeSectionName="Technology"> 1-->
                 <!-- aura:if to dynamically display categories.-->
